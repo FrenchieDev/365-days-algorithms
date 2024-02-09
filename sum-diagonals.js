@@ -27,7 +27,14 @@ function diagonalDifference(arr) {
             }
         }
     }
-    return result = (leftDiagonal - rightDiagonal) * -1
+
+    if (leftDiagonal - rightDiagonal < 0){
+        result = (leftDiagonal - rightDiagonal) * -1
+    } else {
+        result = leftDiagonal - rightDiagonal
+    }
+    
+    return result
 }
 
 console.log(diagonalDifference(m))
